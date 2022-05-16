@@ -104,6 +104,7 @@ const Home: NextPage = () => {
               <div className="col-md-8">
                 <label htmlFor="email" className='form-label'>PESAN</label>
                 <textarea name="pesan" className='form-control' id="email" cols={30} rows={10}></textarea>
+                <button type='submit' className='btn btn-light mt-4 w-100'>Submit</button>
               </div>
             </form>
           </div>
