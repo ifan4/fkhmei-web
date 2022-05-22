@@ -11,20 +11,15 @@
   font-family: 'Titillium Web', sans-serif;
 }
 
-.main {
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-}
+
 .jumbotron {
-  /* background: url('../public/halaman-utama-gambar-1.png') no-repeat center center; */
+  background: no-repeat center center fixed;
+  position: relative;
   background-size:cover;
-  height: 100vh;
+  min-height: 100vh;
 }
 .profilSingkat {
   position: relative;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
   height: 100vh;
 }
 @media only screen and (min-width: 1px) and (max-width: 767px){
@@ -54,10 +49,6 @@
   background-size: cover;
   -o-background-size: cover;
   height: 100vh;
-}
-.footer {
-  background-color: #424851;
-
 }
 
 
