@@ -8,7 +8,7 @@ import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
-    <Layout>
+    <Layout solidColor={false}>
         <div className={styles.jumbotron}>
           <Image src={'/halaman-utama-gambar-1.png'} layout="fill" objectFit="cover" quality={100}></Image>
           <div className="container text-white text-center position-absolute top-50 start-50 translate-middle mt-4">
