@@ -10,10 +10,11 @@ const Home: NextPage = () => {
     <div className={styles.main}>
         <Navbar/>
         <div className={styles.jumbotron}>
+          <Image src={'/halaman-utama-gambar-1.png'} layout="fill" objectFit="cover" quality={100}></Image>
           <div className="container text-white text-center position-absolute top-50 start-50 translate-middle mt-4">
-            <h3 className='fw-bold'>FKHMEI WILAYAH VII</h3>
-            <p className='py-0'>Forum Komunikasi Himpunan Mahasiswa Elektro Indonesia</p>
-            <h5>#Jabar ngahiji, jabar kahiji</h5>
+            <h3 className={styles.alice}>FKHMEI WILAYAH VII</h3>
+            <p className={`py-0 fs-5 ${styles.raleway}`} style={{fontWeight:'100'}}>Forum Komunikasi Himpunan Mahasiswa Elektro Indonesia</p>
+            <h5 className={styles.raleway} style={{fontWeight:'400'}}>#Jabar ngahiji, jabar kahiji</h5>
 
             <div className="d-flex align-items-center justify-content-center mt-5">
               <button className='btn btn-outline-light'>
@@ -51,55 +52,61 @@ const Home: NextPage = () => {
         </div>
 
         <div className={styles.profilSingkat}>
+          <Image src={'/background-kertas.jpg'} layout="fill" objectFit="cover" quality={100}></Image>
           <div  className="container text-white text-center position-absolute top-50 start-50 translate-middle">
-            <h2 className='mb-5 fw-bold'>PROFIL SINGKAT</h2>
-            <div className="d-inline-block bg-light" style={{width:'150px',height:'150px'}}/>
+            <h2 className='mb-3 mb-md5 fw-bold'>PROFIL SINGKAT</h2>
+            <p className='px-md-5 py-0'>FKHMEI (Forum Komunikasi Himpunan Mahasiswa Elektro Indonesia) adalah organisasi seprofesi di bawah naungan dirjen Dikti. Wilayah 7 merupakan regional Jawa barat yang menjadi domisili FKHMEI Wilayah 7 berada. Dengan jargon "Jabar ngahiji, Jabar Kahiji" menjadi citra serta acuan dalam setiap gerakan wilayah 7. #Jabar ngahiji, Jabar Kahiji</p>
+            <Image src={'/Koorwil.png'} width={300} height={300} className={styles.koorwil}></Image>
+            <h4>AZI RAMA TIARA</h4>
+            <p className='fw-lighter'>Koordinator Wilayah</p>
           </div>
 
-          <div className='text-white position-absolute bottom-0 end-0 p-3 text-end'>
-            <h5 style={{fontSize:'12px'}}>FKHMEI WILAYAH VII</h5>
-            <h6 style={{fontSize: '12px'}}>#Jabar ngahiji, jabar kahiji</h6>
+          <div className={`${styles.watermark} text-white position-absolute bottom-0 end-0 p-3 text-end`}>
+            <h5>FKHMEI WILAYAH VII</h5>
+            <h6>#Jabar ngahiji, jabar kahiji</h6>
           </div>
         </div>
 
         <div className={styles.onGoing}>
+          <Image src={'/background-kertas.jpg'} layout="fill" objectFit="cover" quality={100}></Image>
           <div  className="container text-white text-center position-absolute top-50 start-50 translate-middle">
             <div className="row justify-content-center mb-5">
               <div className="col-6">
-                <h2 className='mb-2'>ON GOING</h2>
-                <div className="d-inline-block bg-light" style={{width:'190px',height:'190px'}}/>
+                <h2 className='mb-2 mb-md-4'>ON GOING</h2>
+                <Image src={'/fkhmei-teknologi.jpg'} width={250} height={250}></Image>
               </div>
             </div>
             <div className="row justify-content-evenly">
               <div className="col-5">
-                  <h2 className='mb-2'>LAST</h2>
-                  <div className="d-inline-block bg-light" style={{width:'150px',height:'150px'}}/>
+                  <h2 className='mb-2 mb-md-4'>LAST</h2>
+                  <Image src={'/fkhmei-teknologi.jpg'} width={150} height={150}></Image>
               </div>
               <div className="col-5">
-                  <h2 className='mb-2'>COMING SOON</h2>
-                  <div className="d-inline-block bg-light" style={{width:'150px',height:'150px'}}/>
+                  <h2 className='mb-2 mb-md-4'>COMING SOON</h2>
+                  <Image src={'/fkhmei-teknologi.jpg'} width={150} height={150}></Image>
               </div>
             </div>
             
           </div>
 
-          <div className='text-white position-absolute bottom-0 end-0 p-3 text-end'>
-            <h5 style={{fontSize:'12px'}}>FKHMEI WILAYAH VII</h5>
-            <h6 style={{fontSize: '12px'}}>#Jabar ngahiji, jabar kahiji</h6>
+          <div className={`${styles.watermark} text-white position-absolute bottom-0 end-0 p-3 text-end`}>
+            <h5>FKHMEI WILAYAH VII</h5>
+            <h6>#Jabar ngahiji, jabar kahiji</h6>
           </div>
         </div>
 
         <div className={styles.aspirasi}>
+          <Image src={'/background-kertas.jpg'} layout="fill" objectFit="cover" quality={100}></Image>
           <div  className="container text-white position-absolute top-50 start-50 translate-middle">
             <h2 className='mb-5 text-center fw-bold'>ASPIRASI</h2>
             <form action="" className='row g-3 justify-content-center'>
               <div className='col-md-4'>
                 <label htmlFor="nama" className='form-label'>NAMA</label>
-                <input type="text" className='form-text w-100' id='nama'/>
+                <input type="text" className='form-control w-100' id='nama'/>
               </div>
               <div className='col-md-4'>
                 <label htmlFor="email" className='form-label'>EMAIL</label>
-                <input type="text" className='form-text w-100' id='email'/>
+                <input type="text" className='form-control w-100' id='email'/>
               </div>
               <div className="col-md-8">
                 <label htmlFor="email" className='form-label'>PESAN</label>
@@ -109,9 +116,9 @@ const Home: NextPage = () => {
             </form>
           </div>
 
-          <div className='text-white position-absolute bottom-0 end-0 p-3 text-end'>
-            <h5 style={{fontSize:'12px'}}>FKHMEI WILAYAH VII</h5>
-            <h6 style={{fontSize: '12px'}}>#Jabar ngahiji, jabar kahiji</h6>
+          <div className={`${styles.watermark} text-white position-absolute bottom-0 end-0 p-3 text-end`}>
+            <h5>FKHMEI WILAYAH VII</h5>
+            <h6>#Jabar ngahiji, jabar kahiji</h6>
           </div>
         </div>
 
