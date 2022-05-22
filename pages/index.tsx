@@ -55,7 +55,7 @@ const Home: NextPage = () => {
           <Image src={'/background-kertas.jpg'} layout="fill" objectFit="cover" quality={100}></Image>
           <div  className="container text-white text-center position-absolute top-50 start-50 translate-middle">
             <h2 className='mb-3 mb-md5 fw-bold'>PROFIL SINGKAT</h2>
-            <p className='px-md-5 py-0'>FKHMEI (Forum Komunikasi Himpunan Mahasiswa Elektro Indonesia) adalah organisasi seprofesi di bawah naungan dirjen Dikti. Wilayah 7 merupakan regional Jawa barat yang menjadi domisili FKHMEI Wilayah 7 berada. Dengan jargon "Jabar ngahiji, Jabar Kahiji" menjadi citra serta acuan dalam setiap gerakan wilayah 7. #Jabar ngahiji, Jabar Kahiji</p>
+            <p className='px-md-5 py-0'>FKHMEI (Forum Komunikasi Himpunan Mahasiswa Elektro Indonesia) adalah organisasi seprofesi di bawah naungan dirjen Dikti. Wilayah 7 merupakan regional Jawa barat yang menjadi domisili FKHMEI Wilayah 7 berada. Dengan jargon &quot;Jabar ngahiji, Jabar Kahiji&quot; menjadi citra serta acuan dalam setiap gerakan wilayah 7. #Jabar ngahiji, Jabar Kahiji</p>
             <Image src={'/Koorwil.png'} width={300} height={300} className={styles.koorwil}></Image>
             <h4>AZI RAMA TIARA</h4>
             <p className='fw-lighter'>Koordinator Wilayah</p>
