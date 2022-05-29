@@ -78,6 +78,10 @@ export default function organisasi(){
                 </table>
             </div>
 
+            <div className="container text-center my-2 py-2">
+                <Image src={'/logo-himpunans.png'} width={710} height={352}/>
+            </div>
+
             
             
         </Layout>
