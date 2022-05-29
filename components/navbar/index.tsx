@@ -50,10 +50,14 @@ export default function navbar(props: LayoutProps){
                             </Link>
                         </li>
                         <li>
-                            <a className="dropdown-item" href="#">Organisasi</a>
+                            <Link href={'/profile/organisasi'}>
+                                <a className="dropdown-item" href="#">Organisasi</a>
+                            </Link>
                         </li>
                         <li>
-                            <a className="dropdown-item" href="#">Kepengurusan</a>
+                            <Link href={'/profile/kepengurusan'}>
+                                <a className="dropdown-item" href="#">Kepengurusan</a>
+                            </Link>
                         </li>
                     </ul>
                     </div>
