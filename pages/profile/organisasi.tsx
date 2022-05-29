@@ -26,7 +26,7 @@ export default function organisasi(){
     const Table = (props:any) => {
         return(
             <tr>
-                <th scope="row" className="text-center px-0">{props.id}</th>
+                <th scope="row" className="text-center px-2 px-md-0">{props.id}</th>
                 <td>{props.name}</td>
             </tr>
         )
