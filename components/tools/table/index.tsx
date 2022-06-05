@@ -43,7 +43,10 @@ export default function table({head,content}:any){
                     } )
                     :
                     <tr> 
-                        <td colSpan={3} className={'text-center'}>loading...</td>
+                        <td colSpan={3} className={'text-center'}>
+                            <div className="spinner-grow text-secondary align-middle p-3 m-2" role="status"/>
+                            <span className="align-middle">Loading...</span>
+                        </td>
                     </tr>
                 }
             </tbody>
