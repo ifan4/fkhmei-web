@@ -44,7 +44,7 @@ export default function kepengurusan(){
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(()=> {
        getAllData()
-    }
+    })
 
     return(
         <Layout solidColor={true}>
