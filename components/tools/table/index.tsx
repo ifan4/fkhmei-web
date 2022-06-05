@@ -34,12 +34,17 @@ export default function table({head,content}:any){
 
 
                 {
-                    data &&
+                    data.length > 0 
+                    ?
                     data.map( (row:any,key:Key) => {
                         return(
                             <TableRow datas={row} key={key}/>
                         )
                     } )
+                    :
+                    <tr> 
+                        <td colSpan={3} className={'text-center'}>loading...</td>
+                    </tr>
                 }
             </tbody>
         </table>
