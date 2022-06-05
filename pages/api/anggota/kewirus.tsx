@@ -1,5 +1,5 @@
-import { Kewirus } from '../../../data/Kewirus';
+import { kewirus } from '../../../data/kewirus';
 
 export default function handler(req:any, res:any){
-    res.status(200).json(Kewirus)
+    res.status(200).json(kewirus)
 }

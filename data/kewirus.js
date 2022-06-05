@@ -1,4 +1,4 @@
-export const Kewirus = [
+export const kewirus = [
     {
         id: 1,
         name: 'Raihan Fakhri R.',
