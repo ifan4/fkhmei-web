@@ -1,44 +1,29 @@
 import { Key, useEffect, useState } from "react"
 
 export default function table({head,content}:any){
-    console.log('ini content');
-    console.log(content);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [data, setData] = useState()
+
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEffect(()=> {
+        console.log('this is useEffect');
+        
+        setData(content)
+        console.log(data);
+        
+    })
     
     
        
     return (
-        <table className="table table-bordered">
-            <thead>
-                <tr>
-                    {
-                        head.map( (d:any,key:Key) => {
-                            return(
-                                <th scope="col" key={key}>{d}</th>
-                            )
-                        })
-                    }
-                </tr>
-            </thead>
-            <tbody>
-
-
-                {/* {
-                    content.map( (row:any,key:Key) => {
-                        return(
-                            <tr key={key}>
-                                {
-                                    row.map( (col:any,key:Key) => {
-                                        return(
-                                            <td key={key}>{col}</td>
-                                        )
-                                    })
-                                }
-                                
-                            </tr>
-                        )
-                    } )
-                } */}
-            </tbody>
-        </table>
+        <>
+            {
+                data.array.forEach((data:any) => {
+                    console.log("test");
+                    
+                })
+            }
+        </>
     )
 }
