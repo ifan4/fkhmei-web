@@ -11,10 +11,6 @@ export default function organisasi(){
         
         const data = await res.json();  
         setHimpunans(data)
-        console.log(himpunans);
-        
-        
-        
     }
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
