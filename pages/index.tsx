@@ -5,12 +5,18 @@ import Image from 'next/image'
 import Layout from '../components/layout'
 import Navbar from '../components/navbar'
 import styles from '../styles/Home.module.css'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Home: NextPage = () => {
   return (
     <Layout solidColor={false}>
         <div className={styles.jumbotron}>
-          <Image src={'/halaman-utama-gambar-1.png'} layout="fill" objectFit="cover" quality={100}></Image>
+          {/* <MyImage 
+          image={
+            <Image src={'/halaman-utama-gambar-1.png'} layout="fill" objectFit="cover" quality={100}/>
+          }
+          /> */}
+          <Image src={'/halaman-utama-gambar-1.png'} layout="fill" objectFit="cover" quality={100} loading={'lazy'}/>
           <div className="container text-white text-center position-absolute top-50 start-50 translate-middle mt-4">
             <h3 className={styles.alice}>FKHMEI WILAYAH VII</h3>
             <p className={`py-0 fs-5 ${styles.raleway}`} style={{fontWeight:'100'}}>Forum Komunikasi Himpunan Mahasiswa Elektro Indonesia</p>
@@ -52,7 +58,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className={styles.profilSingkat}>
-          <Image src={'/background-kertas.jpg'} layout="fill" objectFit="cover" quality={100}></Image>
+          <Image src={'/background-kertas.jpg'} layout="fill" objectFit="cover" quality={100} loading={'lazy'}></Image>
           <div  className="container text-white text-center position-absolute top-50 start-50 translate-middle">
             <h2 className='mb-3 mb-md5 fw-bold'>PROFIL SINGKAT</h2>
             <p className='px-md-5 py-0'>FKHMEI (Forum Komunikasi Himpunan Mahasiswa Elektro Indonesia) adalah organisasi seprofesi di bawah naungan dirjen Dikti. Wilayah 7 merupakan regional Jawa barat yang menjadi domisili FKHMEI Wilayah 7 berada. Dengan jargon &quot;Jabar ngahiji, Jabar Kahiji&quot; menjadi citra serta acuan dalam setiap gerakan wilayah 7. #Jabar ngahiji, Jabar Kahiji</p>
@@ -68,22 +74,22 @@ const Home: NextPage = () => {
         </div>
 
         <div className={styles.onGoing}>
-          <Image src={'/background-kertas.jpg'} layout="fill" objectFit="cover" quality={100}></Image>
+          <Image src={'/background-kertas.jpg'} layout="fill" objectFit="cover" quality={100} loading="lazy"></Image>
           <div  className="container text-white text-center position-absolute top-50 start-50 translate-middle">
             <div className="row justify-content-center mb-5">
               <div className="col-6">
                 <h2 className='mb-2 mb-md-4'>ON GOING</h2>
-                <Image src={'/fkhmei-teknologi.jpg'} width={250} height={250}></Image>
+                <Image src={'/fkhmei-teknologi.jpg'} width={250} height={250} loading="lazy"></Image>
               </div>
             </div>
             <div className="row justify-content-evenly">
               <div className="col-5">
                   <h2 className='mb-2 mb-md-4'>LAST</h2>
-                  <Image src={'/fkhmei-teknologi.jpg'} width={150} height={150}></Image>
+                  <Image src={'/fkhmei-teknologi.jpg'} width={150} height={150} loading="lazy"></Image>
               </div>
               <div className="col-5">
                   <h2 className='mb-2 mb-md-4'>COMING SOON</h2>
-                  <Image src={'/fkhmei-teknologi.jpg'} width={150} height={150}></Image>
+                  <Image src={'/fkhmei-teknologi.jpg'} width={150} height={150} loading="lazy"></Image>
               </div>
             </div>
             
@@ -96,7 +102,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className={styles.aspirasi}>
-          <Image src={'/background-kertas.jpg'} layout="fill" objectFit="cover" quality={100}></Image>
+          <Image src={'/background-kertas.jpg'} layout="fill" objectFit="cover" quality={100} loading="lazy"></Image>
           <div  className="container text-white position-absolute top-50 start-50 translate-middle">
             <h2 className='mb-5 text-center fw-bold'>ASPIRASI</h2>
             <form action="" className='row g-3 justify-content-center'>
@@ -124,5 +130,6 @@ const Home: NextPage = () => {
     </Layout>
   )
 }
+
 
 export default Home

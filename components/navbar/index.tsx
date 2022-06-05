@@ -15,9 +15,8 @@ export default function navbar(props: LayoutProps){
     
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(()=> {
-        console.log(solidColor);
         
-        solidColor == true && setHeaderColor("#CFCFCF");
+        solidColor == true && setHeaderColor("#9399A1");
     },[])
     
     // eslint-disable-next-line react-hooks/rules-of-hooks
