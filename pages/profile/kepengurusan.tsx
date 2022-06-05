@@ -44,11 +44,12 @@ export default function kepengurusan(){
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(()=> {
        getAllData()
-    },[])
+    }
 
     return(
         <Layout solidColor={true}>
             <div className="container py-5 my-5">
+
                 <h1 className="my-3">Kepengurusan</h1>
                 <div className="row py-2">
                     <div className="col-md-2">
@@ -109,6 +110,7 @@ export default function kepengurusan(){
                         <Table head={['Nama', 'Jabatan', 'Himpunan']} content={state.psdm}/>
                     </div>
                 </div>
+
             </div>
         </Layout>
     )
