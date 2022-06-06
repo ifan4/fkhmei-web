@@ -1,7 +1,7 @@
 export const exOfficio = [
     {
         id: 1,
-        name: 'Rangga Catur Aji',
+        name: 'Azi Rama Tiara',
         jabatan: 'Koordinator Wilayah',
         himpunan: 'HME UNJANI'
     },
