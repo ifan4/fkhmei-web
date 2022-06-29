@@ -1,0 +1,10 @@
+
+.rectangle {
+    border-style: solid;
+    height: 0;
+    width: 100vh;
+    height: 100vh;
+    border-color: rgba(255, 255, 255, 0.70) transparent transparent transparent;
+    border-width: 100vh 40vh 0 0;
+    position: absolute;
+}

@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 import Navbar from '../components/navbar'
 import styles from '../styles/Home.module.css'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import Router from 'next/router'
 
 const Home: NextPage = () => {
   return (
@@ -23,7 +24,10 @@ const Home: NextPage = () => {
             <h5 className={styles.raleway} style={{fontWeight:'400'}}>#Jabar ngahiji, jabar kahiji</h5>
 
             <div className="d-flex align-items-center justify-content-center mt-5">
-              <button className='btn btn-outline-light'>
+              <button 
+              className='btn btn-outline-light'
+              onClick={()=> Router.push('berita')}
+              >
                 BERITA
               </button>
               <hr className='vr py-4 border border-1 opacity-100 rounded-pill mx-3'/>

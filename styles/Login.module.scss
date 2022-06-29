@@ -1,0 +1,10 @@
+$h-pas : 100vh;
+.colLeft {
+    background-image: linear-gradient(180deg, #75878e 0%, #47574d 100%);
+    min-height: $h-pas;
+
+}
+.colRight {
+    background-color: #F7FAFC;
+    min-height: $h-pas;
+}
