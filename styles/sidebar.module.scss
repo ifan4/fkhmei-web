@@ -1,0 +1,35 @@
+@mixin sidebar($topColor,$bottomColor) {
+    width: 225px;
+    min-height: 100vh;
+    background: linear-gradient(180deg, $topColor 0%, $bottomColor 99.99%, rgba(26, 166, 74, 0) 100%);
+    position: fixed;
+    li {
+        a {
+            &:hover{
+                background-color: #088A8C;
+            }
+        }
+    }
+    .listCollapse {
+        font-size: 14px;
+        .subActive {
+            background-color: #59bddb52 !important;
+            border-left: 5px solid #00ff5985;
+            }
+        :hover {
+            background-color: #3a6643de !important;
+        }
+    }
+    .active {
+        background-color: rgba(255, 255, 255, 0.19);
+        border-right:5px solid #C8FFBF;
+    }
+}
+.sidebarAdmin {
+    @include sidebar(#909b94,#1f667b)
+}
+
+  .rightSide {
+    margin-left: 225px;
+    min-height: 100vh;
+  }
