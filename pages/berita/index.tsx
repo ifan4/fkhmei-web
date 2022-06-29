@@ -106,7 +106,7 @@ const CardBerita = ({title,isi,imageUrl,waktu}:any) => {
   return (
     <div className="col-md-4">
       <div className="card" style={{minHeight: '400px'}}>
-        <Image src={'https://pbs.twimg.com/profile_images/1455185376876826625/s1AjSxph_400x400.jpg'} className="card-img-top" alt="..." width={130} height={130} layout='fixed' loading={'lazy'}/>
+        <Image src={'https://pbs.twimg.com/profile_images/1455185376876826625/s1AjSxph_400x400.jpg'} className="card-img-top" alt={title} width={130} height={130} layout='fixed' loading={'lazy'}/>
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
           <p className="card-text">{isi}</p>
