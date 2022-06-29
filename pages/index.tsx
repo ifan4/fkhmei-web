@@ -31,9 +31,9 @@ const Home: NextPage = () => {
                 BERITA
               </button>
               <hr className='vr py-4 border border-1 opacity-100 rounded-pill mx-3'/>
-              <button className='btn btn-outline-light'>
+              <a className='btn btn-outline-light' href="https://instagram.com/store.fkhmei7?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener noreferrer">
                 SHOP
-              </button>
+              </a>
             </div>
             <div className="d-flex align-items-center justify-content-center">
               <a href="#" className='btn p-0'>
