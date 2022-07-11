@@ -16,7 +16,6 @@ export function middleware(request: NextRequest, respon: NextApiResponse) {
     
     if (request.nextUrl.pathname.startsWith('/admin')) {
         // This logic is only applied to /about
-        console.log('masuk memek');
 
         if (!accessToken){
             return NextResponse.redirect(new URL('/', request.url))
@@ -25,7 +24,6 @@ export function middleware(request: NextRequest, respon: NextApiResponse) {
     }
     if (request.nextUrl.pathname.startsWith('/auth')) {
         // This logic is only applied to /about
-        console.log('masuk memek');
 
         if (accessToken){
             return NextResponse.redirect(new URL('/admin', request.url))

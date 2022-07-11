@@ -15,15 +15,11 @@ import { toast } from 'react-toastify'
 import { useRouter } from 'next/router'
 
 export default function admin () {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const router = useRouter()
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [data, setData] = useState([])
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [currentData,setCurrentData] = useState([])
     
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(()=> {
         getData()
       },[])

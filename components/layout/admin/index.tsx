@@ -12,7 +12,6 @@ interface LayoutProps {
 }
 export default function admin(props: LayoutProps){
     const { children } = props;
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const router = useRouter();
 
     return(

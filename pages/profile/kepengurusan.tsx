@@ -3,7 +3,6 @@ import Layout from "../../components/layout";
 import Table from "../../components/tools/table";
 
 export default function kepengurusan(){
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [state, SetState] = useState( {
         exOfficio: '',
         advokom: '',
@@ -41,7 +40,6 @@ export default function kepengurusan(){
     }
 
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(()=> {
        getAllData()
     })

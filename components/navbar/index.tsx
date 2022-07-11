@@ -10,16 +10,13 @@ interface LayoutProps {
 
 export default function navbar(props: LayoutProps){
     const {solidColor} = props
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [headerColor, setHeaderColor] = useState('rgba(207, 207, 207, 0.37)')
     
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(()=> {
         
         solidColor == true && setHeaderColor("#9399A1");
     },[])
     
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const pathname = useRouter().pathname
     console.log(pathname);
     

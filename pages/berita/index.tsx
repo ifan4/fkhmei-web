@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -45,7 +44,14 @@ const Home: NextPage = () => {
             <Image src={'/halaman-utama-gambar-1.png'} layout="fill" objectFit="cover" quality={100}/>
           }
           /> */}
-          <Image src={'/halaman-utama-gambar-1.png'} className="bg-secondary" layout="fill" objectFit="cover" quality={100} loading={'lazy'}/>
+          <Image 
+          src={'/halaman-utama-gambar-1.png'} 
+          className="bg-secondary" 
+          layout="fill" 
+          alt='fkhmei'
+          objectFit="cover" 
+          quality={100} 
+          loading={'lazy'}/>
           <div className={Styles.rectangle}></div>
           <div className="container text-dark text-start position-absolute top-50 start-50 translate-middle mt-4">
             <h1 className='mb-md-5'>BERITA, ARTIKEL DAN JURNAL</h1>

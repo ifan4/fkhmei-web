@@ -15,9 +15,7 @@ const logoutHandler = () => {
 }
 
 export default function header(){
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [profileImage, setProfileImage] = useState('');
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [profileName, setProfileName] = useState('Admin');
    
     

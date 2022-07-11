@@ -25,21 +25,16 @@ type modalType = {
 const configModal = createContext<modalType | undefined>(undefined);
 
 export default function feedbacks(){
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [feedbacks, setFeedbacks] = useState([])
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [currentFeedbacks, setCurrentFeedbacks] = useState([])
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [feedbackModal, setFeedbackModal] = useState({
         id: '',
         name: '',
         waktu: '',
         paragraph: ''
     })
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [openModal, setOpenModal] = useState(false)
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(()=> {
         getFeedbacks()
     },[])

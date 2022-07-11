@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import { useForm, SubmitHandler, Controller } from 'react-hook-form'
 import Layout from '../../../components/layout/admin'
 import { Input, TextArea } from '../../../components/tools/input'

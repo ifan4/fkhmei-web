@@ -1,12 +1,9 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import { Key, useEffect, useState } from "react"
 
 export default function table({head,content}:any){
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [data, setData] = useState([])
 
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(
         () => {
             setData(content)

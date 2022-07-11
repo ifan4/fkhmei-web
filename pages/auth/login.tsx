@@ -13,18 +13,14 @@ import Cookies from 'js-cookie';
 
 
 export default function login(){
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const router = useRouter()
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [state,setState] = useState({
         email: '',
         password: '',
         status: '',
         message: ''
     })
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [message,setMessage] = useState('')
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [isLoading, setIsLoading] = useState(false)
 
     const onChangeHandler = (e:any) => {
