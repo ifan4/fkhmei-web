@@ -53,6 +53,8 @@ export default function login(){
             setMessage('Password atau username salah!')
             
         } catch (error) {
+            console.log('error');
+            console.log(error);
             
         }
 
