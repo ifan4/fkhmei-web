@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { BiHomeAlt,BiHistory } from 'react-icons/bi';
-import {BsNewspaper} from 'react-icons/bs'
+import {BsChatLeftQuote, BsNewspaper} from 'react-icons/bs'
 import Header from '../../navbar/admin'
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -30,9 +30,9 @@ export default function admin(props: LayoutProps){
 
 
                     <li className="nav-item">
-                        <Link href={'/admin/dashboard'}>
+                        <Link href={'/admin'}>
                             <a 
-                            className={`nav-link d-flex align-items-center link-light ${router.pathname == "/admin/dashboard" && Styles.active}`} 
+                            className={`nav-link d-flex align-items-center link-light ${router.pathname == "/admin" && Styles.active}`} 
                             aria-current="page" 
                             href="home">
                                 <BiHomeAlt className="me-2"/>
@@ -44,11 +44,23 @@ export default function admin(props: LayoutProps){
                    
                   
                     <li className="nav-item">
-                        <Link href={'/admin/historyLogs'}>
-                            <a className={`nav-link d-flex align-items-center link-light  ${router.pathname.slice(0,18) == "/admin/historyLogs" && Styles.active}`}
+                        <Link href={'/admin/news'}>
+                            <a className={`nav-link d-flex align-items-center link-light  ${router.pathname.slice(0,11) == "/admin/news" && Styles.active}`}
                             href="#">
                                 <BsNewspaper className="me-2"/>
                                 <span>News Management</span>
+                            </a>
+                        </Link>
+                    </li>
+
+                    <li className="nav-item">
+                        <Link href={'/admin/feedbacks'}>
+                            <a 
+                            className={`nav-link d-flex align-items-center link-light ${router.pathname.slice(0,16) == "/admin/feedbacks" && Styles.active}`} 
+                            aria-current="page" 
+                            href="home">
+                                <BsChatLeftQuote className="me-2"/>
+                                <span>Feedbacks</span>
                             </a>
                         </Link>
                     </li>
