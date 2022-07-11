@@ -37,7 +37,7 @@ export default function login(){
         e.preventDefault()
         try {
             const res = await request({
-                url: `${process.env.NEXT_PUBLIC_URL}/login`,
+                url: `${process.env.NEXT_PUBLIC_URL}/api/login`,
                 method: 'POST',
                 data: {
                     email: state.email,

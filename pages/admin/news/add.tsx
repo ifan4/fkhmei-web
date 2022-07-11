@@ -27,7 +27,7 @@ export default function addNews(){
       const SubmitHandler:SubmitHandler<any> = async (data)=> {
         try {
               const res = await request({
-                  url: `/news/create`,
+                  url: `/api/news/create`,
                   method: 'POST',
                   headers: {"Content-Type": "multipart/form-data"},
                   data: {
