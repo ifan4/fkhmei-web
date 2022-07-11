@@ -22,8 +22,8 @@ export default function admin () {
     const getCountNewsAndFeedback = async ()=> {
         try {
             const [news,feedbacks] = await Promise.all([
-                request({url: '/news'}),
-                request({url:'/feedback'})
+                request({url: '/api/news'}),
+                request({url:'/api/feedback'})
             ])
             setCount({
                 news: news.data[0].length,

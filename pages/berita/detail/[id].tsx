@@ -35,7 +35,7 @@ const Home: NextPage = () => {
   const getData = async ()=> {
     try {
       const response = await request({
-          url: `/news/edit/${id}`
+          url: `/api/news/edit/${id}`
       })
       console.log('response');
       setData({

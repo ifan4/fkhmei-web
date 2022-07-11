@@ -24,7 +24,9 @@ const Home: NextPage = () => {
 
   const getData = async ()=> {
     try {
-      const response = await axios('https://fkhmei-web.ifandri.com/api/news')
+      const response = await request({
+        url: '/api/news'
+      })
       console.log('response');
       setData(response.data[0])
       console.log(response);

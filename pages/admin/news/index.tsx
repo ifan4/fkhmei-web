@@ -26,7 +26,7 @@ export default function admin () {
     
       const getData = async ()=> {
         try {
-          const response = await request({url: '/news'})
+          const response = await request({url: '/api/news'})
           console.log('response');
           setData(response.data[0])
           console.log(response);
@@ -42,7 +42,7 @@ export default function admin () {
           if (!confirm('Are you sure want to delete this data?')) return 0
           try {
               const res = await request({
-                  url: `news/delete/${id}`,
+                  url: `/api/news/delete/${id}`,
                   method: 'DELETE'
               })
               toast.success('News deleted successfully!')

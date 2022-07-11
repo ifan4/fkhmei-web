@@ -41,7 +41,7 @@ export default function feedbacks(){
 
     const getFeedbacks = async ()=> {
         try {
-            const response = await request({url: '/feedback'})
+            const response = await request({url: '/api/feedback'})
             setFeedbacks(response.data[0])
         } catch (error) {
             console.log(error);
@@ -53,7 +53,7 @@ export default function feedbacks(){
 
         try {
             const res = await request({
-                url: `/feedback/delete/${id}`,
+                url: `/api/feedback/delete/${id}`,
                 method: 'DELETE'
             })
             const tempFeedbacks = feedbacks.filter((item:any)=> {

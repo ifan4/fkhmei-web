@@ -3,7 +3,7 @@ import Cookies from 'js-cookie'
 import Router from 'next/router'
 
 
-const client = axios.create( {baseURL: process.env.NEXT_PUBLIC_URL} )
+const client = axios.create( {baseURL: 'https://fkhmei-web.ifandri.com'} )
 
 export const request = ( {...options} ) => {
     // if (!Cookies.get('accessToken')) {
