@@ -3,7 +3,6 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function organisasi(){
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [himpunans, setHimpunans] = useState([])
 
     const getHimpunans = async () => {
@@ -13,7 +12,6 @@ export default function organisasi(){
         setHimpunans(data)
     }
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(()=> {
         getHimpunans()
         

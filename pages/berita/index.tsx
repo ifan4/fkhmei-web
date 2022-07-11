@@ -1,16 +1,18 @@
-/* eslint-disable @next/next/no-img-element */
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Layout from '../../components/layout'
 import Navbar from '../../components/navbar'
 import styles from '../../styles/Home.module.css'
-import styles2 from '../../styles/berita.module.scss'
+import Styles from '../../styles/berita.module.scss'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useEffect, useState } from 'react'
 import { request } from '../../utils/axios-utils'
 import axios from 'axios'
 import Pagination from '../../components/tools/pagination'
+import Link from 'next/link'
+import { textTrunc } from '../../helper'
+import Button from '../../components/tools/button'
 
 const Home: NextPage = () => {
   const [data, setData] = useState([])
@@ -22,8 +24,11 @@ const Home: NextPage = () => {
 
   const getData = async ()=> {
     try {
-      const response = await axios('https://jsonplaceholder.typicode.com/photos?limit=10')
-      setData(response.data)
+      const response = await axios('https://fkhmei-web.ifandri.com/api/news')
+      console.log('response');
+      setData(response.data[0])
+      console.log(response);
+      
       
     } catch (error) {
       console.log(error);
@@ -39,8 +44,15 @@ const Home: NextPage = () => {
             <Image src={'/halaman-utama-gambar-1.png'} layout="fill" objectFit="cover" quality={100}/>
           }
           /> */}
-          <Image src={'/halaman-utama-gambar-1.png'} className="bg-secondary" layout="fill" objectFit="cover" quality={100} loading={'lazy'}/>
-          <div className={styles2.rectangle}></div>
+          <Image 
+          src={'/halaman-utama-gambar-1.png'} 
+          className="bg-secondary" 
+          layout="fill" 
+          alt='fkhmei'
+          objectFit="cover" 
+          quality={100} 
+          loading={'lazy'}/>
+          <div className={Styles.rectangle}></div>
           <div className="container text-dark text-start position-absolute top-50 start-50 translate-middle mt-4">
             <h1 className='mb-md-5'>BERITA, ARTIKEL DAN JURNAL</h1>
             <h3 className={styles.alice}>FKHMEI WILAYAH VII</h3>
@@ -81,10 +93,11 @@ const Home: NextPage = () => {
                 (item:any,i:any) =>
                  <CardBerita 
                  key={i}
+                 id={item.id_news}
                  title = {item.title}
-                 isi = {'Lorem ipsum dolor sit content Lorem ipsum dolor sit content Lorem ipsum dolor sit content'}
-                 imageUrl = {item.url}
-                 waktu = {'10 June 2022'}
+                 isi = {item.content_news}
+                 imageUrl = {'https://fkhmei-web.ifandri.com/imageNews/'+item.image}
+                 waktu = {item.time}
                  />
               )
             }
@@ -102,15 +115,27 @@ const Home: NextPage = () => {
 }
 
 //Kindly dibungkus menggunakan classname row dulu brokuh
-const CardBerita = ({title,isi,imageUrl,waktu}:any) => {
+const CardBerita = ({id,title,isi,imageUrl,waktu,deleteHandler}:any) => {
   return (
-    <div className="col-md-4">
-      <div className="card" style={{minHeight: '400px'}}>
-        <Image src={'https://pbs.twimg.com/profile_images/1455185376876826625/s1AjSxph_400x400.jpg'} className="card-img-top" alt={title} width={130} height={130} layout='fixed' loading={'lazy'}/>
+      <div className="col-md-4">
+      <div className="card" style={{height: '470px'}}>
+        <div className={Styles.imageContainer}>
+          <Image src={imageUrl} className={Styles.image} alt={title} layout="fill" loading={'lazy'}/>
+        </div>
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
-          <p className="card-text">{isi}</p>
-          <a href="#" className="btn btn-secondary mb-2 bottom-0 position-absolute mb-5 pb-1">Lihat Berita</a>
+          <p className="card-text" dangerouslySetInnerHTML={{__html: textTrunc(isi,80)}}>
+        </p>
+          
+              <Link href={`/berita/detail/${id}`}>
+              <Button
+                  name='Lihat Berita'
+                  bgColor='black'
+                  textColor='white'
+                  IsActive = {true}
+                  />
+              </Link>
+          
           <div className="card-footer text-muted position-absolute bottom-0 end-0 start-0">
             {waktu}
           </div>

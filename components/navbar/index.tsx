@@ -10,25 +10,24 @@ interface LayoutProps {
 
 export default function navbar(props: LayoutProps){
     const {solidColor} = props
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [headerColor, setHeaderColor] = useState('rgba(207, 207, 207, 0.37)')
     
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(()=> {
         
         solidColor == true && setHeaderColor("#9399A1");
     },[])
     
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const pathname = useRouter().pathname
     console.log(pathname);
     
     return(
         <nav className="navbar navbar-light fixed-top" style={{backgroundColor: headerColor}}>
             <div className="container py-0">
+            <Link href={'/'}>
                 <a className="navbar-brand d-flex align-items-center" href="#">
                     <Image src={'/logo-header.png'} width={'147'} height={"31"} quality={100} className={'rounded align-middle'}></Image>
                 </a>
+            </Link>
                 <div className='d-flex align-items-center'>
                     <Link href={'/'}>
                         <a 

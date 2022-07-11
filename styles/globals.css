@@ -24,3 +24,8 @@ input:focus, select:focus, textarea:focus {
 input:hover, select:hover, textarea:hover {
   border: 1px solid #2c2e2c !important;
 }
+
+.invalid {
+  color: rgb(232, 117, 117);
+  
+}

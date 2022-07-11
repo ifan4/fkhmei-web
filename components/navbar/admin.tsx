@@ -15,10 +15,8 @@ const logoutHandler = () => {
 }
 
 export default function header(){
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [profileImage, setProfileImage] = useState('');
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [profileName, setProfileName] = useState('');
+    const [profileName, setProfileName] = useState('Admin');
    
     
     
@@ -36,13 +34,6 @@ export default function header(){
                             
                         </a>
                     <ul className="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a className="dropdown-item" href="#">Profile</a></li>
-                        
-                        <li>
-                            <Link href={'/employee'}>
-                                <a className="dropdown-item" href="#">Switch to User</a>
-                            </Link>
-                        </li>
                         
                         <li><a className="dropdown-item" href="#" onClick={logoutHandler}>Logout</a></li>
                     </ul>

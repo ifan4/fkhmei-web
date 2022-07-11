@@ -1,16 +1,66 @@
-/* eslint-disable @next/next/no-img-element */
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Layout from '../components/layout'
 import Navbar from '../components/navbar'
 import styles from '../styles/Home.module.css'
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import Router from 'next/router'
+import { request } from '../utils/axios-utils'
+import { useState } from 'react'
+import { useForm, SubmitHandler } from 'react-hook-form'
+import { Input, TextArea } from '../components/tools/input'
+import Button from '../components/tools/button'
+import ToastContainer from '../components/tools/toastContainer'
+import { toast } from 'react-toastify'
 
 const Home: NextPage = () => {
+
+  const {
+    register,
+    handleSubmit,
+    formState: {errors,isSubmitting},
+    reset,
+  } = useForm()
+
+  const [feedback, setFeedback] = useState({
+    email: '',
+    feedback: ''
+  })
+
+  const sendFeedback = async()=> {
+    try {
+      
+    } catch (error) {
+      
+    }
+  }
+
+  const SubmitHandler:SubmitHandler<any> = async (data)=> {
+    
+    try {
+      // Send feedback
+      const res = await request({
+        url: '/feedback/create',
+        method: 'POST',
+        data: {
+          email: data.email,
+          feedback: data.feedback
+        }
+      })
+      toast.success("Berhasil mengirim feedback, terimakasih!")
+      reset()
+    } catch (error) {
+      toast.error("Ada kesalahan..")
+    }
+  }
+
+
+
+
   return (
     <Layout solidColor={false}>
+        <ToastContainer/>
         <div className={styles.jumbotron}>
           {/* <MyImage 
           image={
@@ -109,19 +159,53 @@ const Home: NextPage = () => {
           <Image src={'/background-kertas.jpg'} layout="fill" objectFit="cover" quality={100} loading="lazy"></Image>
           <div  className="container text-white position-absolute top-50 start-50 translate-middle">
             <h2 className='mb-5 text-center fw-bold'>ASPIRASI</h2>
-            <form action="" className='row g-3 justify-content-center'>
-              <div className='col-md-4'>
-                <label htmlFor="nama" className='form-label'>NAMA</label>
-                <input type="text" className='form-control w-100' id='nama'/>
+            <form className='row g-3 justify-content-center' onSubmit={handleSubmit(SubmitHandler)}>
+              <div className="col-md-4">
+                <Input
+                label_name={'Nama'}
+                register = {
+                  {...register('name', {
+                    required: 'Nama tidak boleh kosong'
+                  })}
+                }
+                errors = { errors.name }
+                />
               </div>
-              <div className='col-md-4'>
-                <label htmlFor="email" className='form-label'>EMAIL</label>
-                <input type="text" className='form-control w-100' id='email'/>
+              <div className="col-md-4">
+                <Input
+                type ={ 'email' }
+                label_name={'Email'}
+                register = {
+                  {...register('email', {
+                    required: 'Email tidak boleh kosong'
+                  })}
+                }
+                errors = { errors.email }
+                />
               </div>
               <div className="col-md-8">
-                <label htmlFor="email" className='form-label'>PESAN</label>
-                <textarea name="pesan" className='form-control' id="email" cols={30} rows={10}></textarea>
-                <button type='submit' className='btn btn-secondary mt-4 w-100'>Submit</button>
+                <TextArea
+                label_name = {'Feedback'}
+                register = {
+                  {...register('feedback', {
+                    required: 'Isi feedback tidak boleh kosong',
+                    maxLength: {
+                      value: 255,
+                      message: 'Maksimal feedback 255 huruf'
+                    }
+                  })}
+                }
+                errors = { errors.feedback }
+                />
+              </div>
+              <div className="col-md-8">
+                <Button 
+                name='Kirim'
+                width={100}
+                bgColor ={'black'}
+                textColor = {'white'}
+                isLoading = {isSubmitting}
+                />
               </div>
             </form>
           </div>
@@ -134,6 +218,7 @@ const Home: NextPage = () => {
     </Layout>
   )
 }
+
 
 
 export default Home

@@ -4,8 +4,43 @@ import Styles from '../../styles/dashboard.module.scss'
 import { BsNewspaper } from'react-icons/bs'
 import { MdAssignmentReturn } from'react-icons/md'
 import {VscFeedback} from 'react-icons/vsc'
+import { request } from '../../utils/axios-utils'
+import { useEffect, useState } from 'react'
 
 export default function admin () {
+    const [count, setCount] = useState({
+        news: 0,
+        feedback: 0
+    })
+
+    useEffect(()=> {
+        getCountNewsAndFeedback()
+    },[])
+
+
+
+    const getCountNewsAndFeedback = async ()=> {
+        try {
+            const [news,feedbacks] = await Promise.all([
+                request({url: '/news'}),
+                request({url:'/feedback'})
+            ])
+            setCount({
+                news: news.data[0].length,
+                feedback: feedbacks.data[0].length
+            })
+            console.log(news);
+            console.log(feedbacks);
+            
+
+            
+
+        } catch (error) {
+            
+        }
+    }
+    
+
     return (
         <LayoutAdmin>
             <div className="containerz">
@@ -15,9 +50,9 @@ export default function admin () {
                             <span>
                                 <BsNewspaper/>
                             </span>
-                            <h5 className="mb-4 mt-1">Total Berita: 6</h5>
+                            <h5 className="mb-4 mt-1">Total Berita: {count.news}</h5>
 
-                            <Link href={'/employee/penggunaanAsset/proposeAsset'}>
+                            <Link href={'/admin/news'}>
                                 <button className="btn">See News</button>
                             </Link>
                         </div>
@@ -27,9 +62,9 @@ export default function admin () {
                             <span>
                                 <VscFeedback/>
                             </span>
-                            <h5 className="mb-4 mt-1">Total Feedback: 3</h5>
+                            <h5 className="mb-4 mt-1">Total Feedback: {count.feedback}</h5>
 
-                            <Link href={'/employee/penggunaanAsset/myAsset'}>
+                            <Link href={'/admin/feedbacks'}>
                                 <button className="btn">See Feedbacks</button>
                             </Link>
                         </div>
