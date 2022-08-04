@@ -10,7 +10,7 @@ const logoutHandler = () => {
     Cookies.remove("refreshToken");
     Cookies.remove("accessToken")
 
-    console.log("Token Has Beeen Removed");
+    
     Router.replace('/auth/login')
 }
 
