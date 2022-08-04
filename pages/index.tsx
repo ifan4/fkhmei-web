@@ -71,7 +71,7 @@ const Home: NextPage = () => {
           <div className="container text-white text-center position-absolute top-50 start-50 translate-middle mt-4">
             <h3 className={styles.alice}>FKHMEI WILAYAH VII</h3>
             <p className={`py-0 fs-5 ${styles.raleway}`} style={{fontWeight:'100'}}>Forum Komunikasi Himpunan Mahasiswa Elektro Indonesia</p>
-            <h5 className={styles.raleway} style={{fontWeight:'400'}}>#Jabar ngahiji, jabar kahiji</h5>
+            <h5 className={styles.alice} style={{fontWeight:'400'}}>#Jabar ngahiji, jabar kahiji</h5>
 
             <div className="d-flex align-items-center justify-content-center mt-5">
               <button 
