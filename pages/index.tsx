@@ -142,7 +142,7 @@ const Home: NextPage = () => {
               <div className="col-5">
                   <h2 className='mb-2 mb-md-4'>LAST</h2>
                   <a href="https://www.instagram.com/p/CgGvQ3DJB6y/?igshid=YmMyMTA2M2Y=" target={'_blank'}>
-                    <Image src={'/fkhmei-teknologi.jpg'} width={150} height={150} loading="lazy"></Image>
+                    <Image src={'/SEMNAS.jpeg'} width={150} height={150} loading="lazy"></Image>
                   </a>
               </div>
               <div className="col-5">
