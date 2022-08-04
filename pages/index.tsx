@@ -133,17 +133,23 @@ const Home: NextPage = () => {
             <div className="row justify-content-center mb-5">
               <div className="col-6">
                 <h2 className='mb-2 mb-md-4'>ON GOING</h2>
-                <Image src={'/fkhmei-teknologi.jpg'} width={250} height={250} loading="lazy"></Image>
+                <a href="#" target={'_blank'}>
+                  <Image src={'/fkhmei-teknologi.jpg'} width={250} height={250} loading="lazy"></Image>
+                </a>
               </div>
             </div>
             <div className="row justify-content-evenly">
               <div className="col-5">
                   <h2 className='mb-2 mb-md-4'>LAST</h2>
-                  <Image src={'/fkhmei-teknologi.jpg'} width={150} height={150} loading="lazy"></Image>
+                  <a href="https://www.instagram.com/p/CgGvQ3DJB6y/?igshid=YmMyMTA2M2Y=" target={'_blank'}>
+                    <Image src={'/fkhmei-teknologi.jpg'} width={150} height={150} loading="lazy"></Image>
+                  </a>
               </div>
               <div className="col-5">
                   <h2 className='mb-2 mb-md-4'>COMING SOON</h2>
-                  <Image src={'/fkhmei-teknologi.jpg'} width={150} height={150} loading="lazy"></Image>
+                  <a href="#" target={'_blank'}>
+                    <Image src={'/fkhmei-teknologi.jpg'} width={150} height={150} loading="lazy"></Image>
+                  </a>
               </div>
             </div>
             
