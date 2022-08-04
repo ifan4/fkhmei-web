@@ -63,6 +63,7 @@ const Home: NextPage = () => {
 
             <div className="d-flex align-items-center mt-md-5 mt-2">
               <a href="#" className='btn p-0'>
+                <a href="https://instagram.com/fkhmeiwil7?igshid=YmMyMTA2M2Y=" target={'_blank'} className='btn p-0'></a>
                 <img 
                 src="https://www.freepnglogos.com/uploads/instagram-logo-png-transparent-background-hd-3.png" 
                 alt="" 
@@ -71,6 +72,7 @@ const Home: NextPage = () => {
                 />
               </a>
               <a href="#" className='btn p-0 mx-3'>
+                <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=jga4294g" target={'_blank'} className='btn p-0 mx-3'></a>
                 <img 
                 src="https://www.freepnglogos.com/uploads/line-messenger-logo-2.png" 
                 alt="" 
@@ -78,6 +80,7 @@ const Home: NextPage = () => {
                 />
               </a>
               <a href="#" className='btn p-0'>
+                <a href="https://youtube.com/channel/UCVapmaJ1gxLvAgzA6QwyFMg" target={'_blank'} className='btn p-0 mx-3'></a>
                 <img 
                 src="https://www.freepnglogos.com/uploads/youtube-play-red-logo-png-transparent-background-6.png" 
                 alt="" 
